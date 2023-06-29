@@ -1,0 +1,55 @@
+# queue data structure implementation
+"""queue works on FIFO(first in and first out) concept. it has a few ternimologies.
+enqueue = insert 
+dequeue = delete  method is pop that we are going to use and it takes index to delete the element from list
+peek = the first item 
+"""
+#implementation
+#take an empty array
+
+def enqueue(arr,val):
+  arr.append(val)
+
+def dequeue(arr):
+  if len(arr)==0:
+    print("list is empty")
+  else:
+    x = arr.pop(0)
+    print("dequeue value is ", x)
+
+def peek(arr):
+  if len(arr)==0:
+    print("list is empty")
+  else:
+    print("peek value is ", arr[0])
+
+def display(arr):
+  a = []
+  if len(arr)==0:
+    print("list is empty")
+  else:
+    for i in range(len(arr)):
+      a.append(arr[i])
+  print("list contains \n",a)
+
+
+if __name__ == '__main__':
+
+  arr = []
+  while True:
+    ch = int(input(" 1-> Enqueue \n 2 -> Dequeue \n 3 -> Peek \n 4 -> Display \n 5 -> Exit \n"))
+    # program implementation
+    if ch ==1:
+      val = int(input("enter the value to be added in list : "))
+      enqueue(arr,val)
+    
+    elif ch ==2:
+        dequeue(arr)
+    
+    elif ch ==3:
+      peek(arr)
+    
+    elif ch ==4:
+      display(arr)
+    else:
+      break
