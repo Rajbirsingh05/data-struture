@@ -1,0 +1,45 @@
+### stack implementation
+
+# these are all function 
+def pushitem(val,a):
+  a.append(val)
+
+def popitem(a):
+  if len(a) ==0:
+    print("empty list")
+  else:
+    val = a.pop()
+    print("The deleted item is ",val)
+
+def peek(a):
+  if len(a) ==0:
+    print("empty list")
+  else:
+    print("The last item in the array is ",a[len(a)-1])
+
+#we need to print list in stack fashion that is why i have taken range accordingly. start from last to first
+def display(a):
+  if len(a) ==0:
+    print("empty list")
+  else:
+    for i in range(len(a)-1, -1, -1):
+      print(a[i])
+
+if __name__ =='__main__':
+  a = []
+  while True:
+    choice = int(input(" 1-> push \n 2 -> pop \n 3 -> Peek \n 4 -> Display \n 5 -> Exit \n"))
+    if choice ==1:
+      val = int(input("Please enter number which will be inserted in array "))
+      pushitem(val,a)
+
+    elif choice ==2:
+      popitem(a)
+    
+    elif choice ==3:
+      peek(a)
+
+    elif choice ==4:
+      display(a)
+    else:
+      break
