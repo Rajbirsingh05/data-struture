@@ -1,0 +1,7 @@
+s = "The Nintendo Entertainment rajbir rajbir rajbir System, commonly known as the NES, is an 8-bit third-generation home video game console produced by Nintendo"
+#create a empty dict
+d = {}
+# iterate over string and count the words in sentence 
+for i in s.split():
+  d[i] = s.count(i)
+print(d)
